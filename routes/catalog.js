@@ -25,6 +25,15 @@ router.get("/items", item_controller.item_list);
 // CATAGORY ROUTES
 
 // GET and POST for create (first because of conflict in reading :id in url), delete and update
-
+router.get("/catagory/create", catagory_controller.catagory_create_get);
+router.post("/catagory/create", catagory_controller.catagory_create_post);
+router.get("/catagory/:id/delete", catagory_controller.catagory_delete_get);
+router.post("/catagory/:id/delete", catagory_controller.catagory_delete_post);
+router.get("/catagory/:id/update", catagory_controller.catagory_update_get);
+router.post("/catagory/:id/update", catagory_controller.catagory_update_post);
 
 // Get for one catagory and list of all
+router.get("/catagory/:id", catagory_controller.catagory_detail);
+router.get("/catagories", catagory_controller.catagory_list);
+
+module.exports = router
