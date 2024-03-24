@@ -1,5 +1,13 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1= title 
+  p Welcome to #[em Sage & Thistle]. We believe that soap, body and home goods should be beautiful and functional, healthy for our communities and better for our planet.
+
+  h1 Dynamic content 
+
+  p We have the following inventory count: 
+
+  ul 
+    li #[strong Items:] !{item_count}
+    li #[strong Catagories:] !{catagory_count}

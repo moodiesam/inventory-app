@@ -11,4 +11,8 @@ CatagorySchema.virtual("url").get(function () {
     return `/catalog/catagory/${this._id}`;
 });
 
+CatagorySchema.virtual("title").get(function () {
+    return `this.name`;
+})
+
 module.exports = mongoose.model("Catagory", CatagorySchema);
